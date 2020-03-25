@@ -1,0 +1,24 @@
+// partial file is a file that is part of style, it should start with underscore (_)
+//originally 1 rem is 16px 
+//62.5*16 = 10px
+//so 22px=2.2rem
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: $m-size;
+    background: rgb(7, 133, 45);
+}
+
+button{
+    cursor: pointer;
+    
+}
+
+.is-active{
+    background: red;
+    font-weight: bold;
+
+}
