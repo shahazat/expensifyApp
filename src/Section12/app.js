@@ -15,6 +15,7 @@ import getVisibleExpenses from './selectors/expenses';
 
 const store = configureStore();
 
+/*
 store.dispatch(addExpense({ description: 'water bill', note: '', amount: 2000, createdAt: 10000 }));
 store.dispatch(addExpense({ description: 'Gas bill', note: '', amount: 1000, createdAt: 200 }));
 store.dispatch(addExpense({ description: 'Rent', note: '', amount: 109500, createdAt: 0 }));
@@ -23,8 +24,8 @@ store.dispatch(addExpense({ description: 'Rent', note: '', amount: 109500, creat
 store.dispatch(setTextFilter(''));
 const state = store.getState();
 const visibleItems = getVisibleExpenses(state.expenses, state.filters);
-
-console.log(visibleItems);
+*/
+//console.log(visibleItems);
 // {/** redux provider */}
 const jsx = (
     <Provider store={store} >
