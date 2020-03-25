@@ -12,9 +12,9 @@
     "devServer": "webpack-dev-server",
     "test": "jest --config=jest.config.json",
     "testWatch": "jest --watch",
-    "comment": "heroku is looking for start script to run. heroku-prebuild: heroku runs it before installing dependencies, heroku-postbuild: after  ",
+    "comment": "node-sass is 4.5.3 but not working heroku is looking for start script to run. heroku-prebuild: heroku runs it before installing dependencies, heroku-postbuild: after  ",
     "start": "node server/server.js",
-    "heroku-postbuild" : "yarn run build:prod"
+    "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
     "babel-cli": "6.24.1",
@@ -33,7 +33,7 @@
     "jest": "20.0.4",
     "live-server": "^1.2.1",
     "moment": "2.18.1",
-    "node-sass": "4.5.3",
+    "node-sass": "^4.13.1",
     "normalize.css": "7.0.0",
     "raf": "3.3.2",
     "react": "16.0.0",
