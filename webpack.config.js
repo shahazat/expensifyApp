@@ -14,7 +14,7 @@ module.exports = (env) => {
     return {
         entry: './src/Section12/app.js',
         output: {
-            path: path.join(__dirname, 'public'), //######################### ABSOULUTE PATH 
+            path: path.join(__dirname, 'public', 'dist'), //######################### ABSOULUTE PATH , does not need to exist beforehand
             filename: 'bundle.js'
         },
 
@@ -55,7 +55,8 @@ module.exports = (env) => {
         devtool: isProduction ? 'source-map' : 'inline-source-map', //cheap-... does not provide css map source 
         devServer: {
             contentBase: path.join(__dirname, 'public'),
-            historyApiFallback: true //return index.html for all 404 pages 
+            historyApiFallback: true, //return index.html for all 404 pages 
+            publicPath : '/dist/'
         }
     };
 };

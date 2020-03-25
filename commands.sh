@@ -175,3 +175,14 @@ heruku create YOUR_APP_NAME
 
 
 git remote : shows heroku 
+
+git commit 
+
+add start and heroku-postbuild to package.json 
+
+git push heroku master  //this should build and deploy your app.
+
+heroku open 
+heroku logs 
+
+//yarn install --production : creates node_modules, not devDependencies 
