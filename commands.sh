@@ -187,3 +187,7 @@ heroku logs
 
 //yarn install --production : creates node_modules, not devDependencies
 yarn add X --dev  
+
+//firebase
+https://firebase.google.com/
+Go to console 
