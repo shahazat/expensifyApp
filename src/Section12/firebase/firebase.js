@@ -3,15 +3,15 @@
 import * as firebase from 'firebase'; //imports all named exports from firebase to a var
 //we dont have to import sdk in a script tag since we install it locally 
 
-const firebaseConfig = {
-    apiKey: "AIzaSyAh4-o7UIovz4A0wM83xCCTRGjzr01j9hQ",
-    authDomain: "expensify-12b28.firebaseapp.com",
-    databaseURL: "https://expensify-12b28.firebaseio.com",
-    projectId: "expensify-12b28",
-    storageBucket: "expensify-12b28.appspot.com",
-    messagingSenderId: "386016773758",
-    appId: "1:386016773758:web:e1e9be2f310eb34c41ba2f",
-    measurementId: "G-32VTWPDSNR"
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyCzhYlDnXA4MTKo9OnVmiq7kLkarPWIsNo",
+    authDomain: "asdhg-a9c92.firebaseapp.com",
+    databaseURL: "https://asdhg-a9c92.firebaseio.com",
+    projectId: "asdhg-a9c92",
+    storageBucket: "asdhg-a9c92.appspot.com",
+    messagingSenderId: "810102695143",
+    appId: "1:810102695143:web:f0ba8abb45f602e513ee42"
   };
 
 firebase.initializeApp(firebaseConfig);
@@ -88,3 +88,33 @@ Pusher
 اگر هم دوستان پرسیدن چرا پی‌اچ‌پی و nodejs نه، این انتخاب بستگی زیادی به پروژه داره. در پروژه‌ای که ارتباط realtime با کلاینت داره باید بتونه پاسخگوی نیاز همزمان ۵۰۰٫۰۰۰ کاربر و بیش از ۱۰ میلیون request در روز باشه. البته بگم بدون شک انتخابم nodejs بود تا اینکه بنچمارک PHP7 رو دیدم. در چنین شرایطی پرفورمنس حرف اولو میزنه، بنابراین باید سمت سرور هم به‌خوبی تنظیم بشه که load balancing به خوبی درصد قابل توجهی به پرفورمنس پروژه کمک می‌کنه. میزبانی پروژه هم به digitalocean و کانفیگشو به laravel forge سپردم
 
   */
+
+
+
+
+  /***
+ 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBz1NbwEPEC6LFw3Xrympw0iOjjBZoguiE",
+    authDomain: "expensifyusa.firebaseapp.com",
+    databaseURL: "https://expensifyusa.firebaseio.com",
+    projectId: "expensifyusa",
+    storageBucket: "expensifyusa.appspot.com",
+    messagingSenderId: "982486225047",
+    appId: "1:982486225047:web:3ee00a364ae9e7524599d2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+
+
+   */
