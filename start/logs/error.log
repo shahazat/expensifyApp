@@ -1,3 +1,0 @@
-[26/Mar/2020 12:01:02] main: Kerio VPN Client Service 8.4.0 build 2650 failed to start because another instance of Kerio VPN Client is running.
-[26/Mar/2020 12:02:53] vpnMain: Unable to open VPN driver: Unknown error
-[26/Mar/2020 12:02:53] VpnFSM: Failed to initialize VPN driver (99).

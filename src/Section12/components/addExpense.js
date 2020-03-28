@@ -1,6 +1,6 @@
 import React from 'react';
 import ExpenseForm from './ExpenseForm';
-import { addExpense } from '../actions/expenses';
+import { startAddExpense } from '../actions/expenses';
 
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux';
@@ -8,8 +8,7 @@ import { connect } from 'react-redux';
 export class AddExpensePage extends React.Component {
 
     onSubmit = (expense) => {
-        // props.dispatch(addExpense(expense));
-        this.props.onSubmit(expense);
+        this.props.startAddExpense(expense);
         this.props.history.push('/'); //navigate to /
     }
 
@@ -26,7 +25,7 @@ export class AddExpensePage extends React.Component {
 
 const mapDispatch2Props = (dispatch) => {
     return {
-        onSubmit: (expense) => dispatch(addExpense(expense))
+        startAddExpense: (expense) => dispatch(startAddExpense(expense))
     };
 }
 
