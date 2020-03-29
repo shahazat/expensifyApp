@@ -7,8 +7,8 @@ import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom'
 
 const ExpensDashBoaedPage = () => (
     <div>
-        <ExpenseListFilters />
         <ExpenseSummeryPage />
+        <ExpenseListFilters />
         <ExpenseList />
     </div>
 );

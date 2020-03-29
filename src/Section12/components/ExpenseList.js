@@ -12,10 +12,18 @@ import uuid from 'uuid';
 
 //named export to use in test 
 export const ExpenseList = (props) => (
-    <div>
+    <div className="content-container">
+        <div className="list-header">
+            <div className="show-for-mobile" >Expenses</div>
+            <div className="show-for-desktop" >Expense</div>
+            <div className="show-for-desktop" >Amount</div>
+        </div>
+        <div className="list-body">
         {
             props.Thisexpenses.length === 0 ? (
-                <p>No expenses </p>
+                <div className="list-item list-item--message">
+                    <span>No expenses</span>
+                </div>
             ) : (
                     props.Thisexpenses.map((a) => {/*return <ExpenseListItem key={a.id} expense={a} id={a.id} />*/
                         return <ExpenseListItem key={a.id} {...a} />
@@ -23,7 +31,7 @@ export const ExpenseList = (props) => (
                     )
                 )
         }
-        {}
+        </div>
     </div>
 );
 

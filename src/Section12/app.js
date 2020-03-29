@@ -15,7 +15,7 @@ import { startSetExpenses } from './actions/expenses'
 import { setTextFilter, sortByAmount, sortByDate, setStartDate, setEndDate } from './actions/filters'
 import getVisibleExpenses from './selectors/expenses';
 import {login, logout} from './actions/auth';
-
+import LoadingPage from './components/LoadingPage';
 
 const store = configureStore();
 
@@ -40,7 +40,7 @@ const jsx = (
 
 );
 
-ReactDOM.render(<p>Loading... </p>, document.getElementById('appdiv'));
+ReactDOM.render(<LoadingPage />, document.getElementById('appdiv'));
 
 let hasRendered = false;
 const renderApp = () => {

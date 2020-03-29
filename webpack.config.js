@@ -23,7 +23,7 @@ module.exports = (env) => {
     const cssExtract = new ExtractTetPlugin('styles.css');//this is name of file 
 
     return {
-        entry: './src/Section12/app.js',
+        entry: ['babel-polyfill', './src/Section12/app.js' ],
         output: {
             path: path.join(__dirname, 'public', 'dist'), //######################### ABSOULUTE PATH , does not need to exist beforehand
             filename: 'bundle.js'

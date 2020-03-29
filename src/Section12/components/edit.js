@@ -6,7 +6,7 @@ import { editExpense, removeExpense, startRemoveExpense, startEditExpense } from
 // named export to be used in test 
 export class EditExpensePage extends React.Component {
 
-    onClick=()=>{
+    onClick = () => {
         //this.props.dispatch(removeExpense({ id: props.expense.id }))
         this.props.onDeleteClick({ id: this.props.expense.id });
         this.props.history.push('/'); //navigate to /
@@ -23,9 +23,16 @@ export class EditExpensePage extends React.Component {
     render() {
         return (
             <div>
-                cccc
-                <ExpenseForm expense={this.props.expense} onSubmit={this.onEdit} />
-                <button onClick={this.onClick}>Remove</button>
+                <div className="page-header">
+                    <div className="content-container">
+                        <h1 className="page-header__title">Edit Expense</h1>
+                    </div>
+                </div>
+
+                <div className="content-container">
+                    <ExpenseForm expense={this.props.expense} onSubmit={this.onEdit} />
+                    <button className="button button--secondary" onClick={this.onClick}>Remove Expense</button>
+                </div>
             </div>
         );
     }
@@ -35,9 +42,9 @@ const mapStore2State = (state, props) => ({ //we can access props here!
     expense: state.expenses.find((expense) => (expense.id === props.match.params.thisVar))
 });
 
-const mapDispatch2Props = (dispatch, props)=>{
+const mapDispatch2Props = (dispatch, props) => {
     return {
-        onEditClick:  (id, expense) => dispatch(startEditExpense(id, expense)),
+        onEditClick: (id, expense) => dispatch(startEditExpense(id, expense)),
         onDeleteClick: (obj) => dispatch(startRemoveExpense(obj))
     };
 }

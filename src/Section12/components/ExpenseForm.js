@@ -11,9 +11,9 @@ export default class ExpenseForm extends React.Component {
         super(props);
 
         this.state = {
-            description: props.expense ?  props.expense.description :'',
-            note:  props.expense ?  props.expense.note :'',
-            amount:  props.expense ?  (props.expense.amount/100).toString() :'',
+            description: props.expense ? props.expense.description : '',
+            note: props.expense ? props.expense.note : '',
+            amount: props.expense ? (props.expense.amount / 100).toString() : '',
             createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
             calenderFocused: false
         };
@@ -78,43 +78,50 @@ export default class ExpenseForm extends React.Component {
     }
     render() {
         return (
-            <div>
-                {this.state.error && <p>{this.state.error}</p>}
-                <form onSubmit={this.onFormSubmit}>
-                    <input
-                        type="text"
-                        placeholder="Description"
-                        autoFocus
-                        value={this.state.description}
-                        onChange={this.onDiscriptionChageHandler}
-                    />
+            <form className="form" onSubmit={this.onFormSubmit}>
+                {this.state.error && <p className="form__error" >{this.state.error}</p>}
 
-                    <input
-                        type="text"
-                        placeholder="amount"
-                        value={this.state.amount}
-                        onChange={this.onAmountChageHandler}
+                <input
+                    type="text"
+                    className="text-input"
+                    placeholder="Description"
+                    autoFocus
+                    value={this.state.description}
+                    onChange={this.onDiscriptionChageHandler}
+                />
 
-                    />
-                    <SingleDatePicker
-                        date={this.state.createdAt} // momentPropTypes.momentObj or null
-                        onDateChange={this.onDateChange} // PropTypes.func.isRequired
-                        focused={this.state.calenderFocused} // PropTypes.bool
-                        onFocusChange={this.onCalenderFocusChange} // PropTypes.func.isRequired
-                        id="ttttsad" // PropTypes.string.isRequired,
-                        numberOfMonths={1}
-                        isOutsideRange={(day) => { return false; }}
-                    />
-                    <textarea
-                        onChange={this.onNoteChageHandler}
-                        value={this.state.note}
-                        placeholder='Notes'>
-                    </textarea>
-                    <button>
-                        Add expense
+                <input
+                    type="text"
+                    placeholder="amount"
+                    className="text-input"
+                    value={this.state.amount}
+                    onChange={this.onAmountChageHandler}
+                />
+
+                <SingleDatePicker
+                    date={this.state.createdAt} // momentPropTypes.momentObj or null
+                    onDateChange={this.onDateChange} // PropTypes.func.isRequired
+                    focused={this.state.calenderFocused} // PropTypes.bool
+                    onFocusChange={this.onCalenderFocusChange} // PropTypes.func.isRequired
+                    id="ttttsad" // PropTypes.string.isRequired,
+                    numberOfMonths={1}
+                    isOutsideRange={(day) => { return false; }}
+                />
+
+                <textarea
+                    className="textarea"
+                    onChange={this.onNoteChageHandler}
+                    value={this.state.note}
+                    placeholder='Add a note fot your expense (optional)'
+                />
+
+                <div>
+                    <button className="button">
+                        Save Expense
                     </button>
-                </form>
-            </div>
+                </div>
+
+            </form>
         );
     }
 }

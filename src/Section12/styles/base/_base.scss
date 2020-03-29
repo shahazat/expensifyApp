@@ -2,6 +2,12 @@
 //originally 1 rem is 16px 
 //62.5*16 = 10px
 //so 22px=2.2rem
+
+*{
+    //box-sizing: content-box; //this is default, when U specify height, only content would be 50.
+    box-sizing: border-box; //when tou specify height, original box+padding+border becomes height
+}
+
 html{
     font-size: 62.5%;
 }
@@ -9,7 +15,8 @@ html{
 body{
     font-family: Helvetica, Arial, sans-serif;
     font-size: $m-size;
-    background: rgb(7, 133, 45);
+    color: $dark-grey;
+    line-height: 1.6;
 }
 
 button{
