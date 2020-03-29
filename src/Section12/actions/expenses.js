@@ -48,7 +48,7 @@ export const startRemoveExpense = ({ id } = {}) => {
     return (dispatch, getState) => {
         const uid = getState().auth.uid;
 
-        return database.ref(`users/${uid}/expenses/${id}`).remove().then(()=>{
+        return database.ref(`users/${uid}/expenses/${id}`).remove().then(() => {
             dispatch(removeExpense({ id }));
         });
     }
@@ -64,7 +64,7 @@ export const startEditExpense = (id, updates) => {
     return (dispatch, getState) => {
         const uid = getState().auth.uid;
 
-        return database.ref(`users/${uid}/expenses/${id}`).update(updates).then(()=>{
+        return database.ref(`users/${uid}/expenses/${id}`).update(updates).then(() => {
             dispatch(editExpense(id, updates));
         });
 
@@ -82,10 +82,10 @@ export const startSetExpenses = () => {
     //     type:'s'
     // };
     return (dispatch, getState) => { //it is called by redux and dispatch is passed in it.
-       
+
         const uid = getState().auth.uid;
 
-       
+
         return database.ref(`users/${uid}/expenses`).once('value').then((snapshot) => {
             const expenses = [];
 
